@@ -6,3 +6,16 @@ service httpd restart
 
 systemctl restart httpd.service
 
+-------反向代理--------
+# 监听的80端口,http域名请求默认端口是80
+<VirtualHost *:80>
+  ServerName www.abc.com (你的域名)
+  ServerAlias www.abc.com (你的域名)
+  ProxyPreserveHost On
+  ProxyRequests Off
+  # 代理重定向地址
+  ProxyPass / http://localhost:8089/ 
+  ProxyPassReverse / http://localhost:8089/ 
+</VirtualHost>
+
+
