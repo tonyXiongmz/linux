@@ -1,5 +1,6 @@
 apche服务器强制重启
-/usr/sbin/httpd -k stop || -k start
+/usr/sbin/httpd -k stop //停止
+/usr/sbin/httpd -k start //启动
 
 apche服务器重启
 service httpd restart 
