@@ -1,0 +1,15 @@
+1、创建定时任务
+crontab -e
+ 2、查看定时任务
+ crontab -l
+ 3、启动定时任务
+ /bin/systemctl restart crond.service
+4、请求方式
+/usr/bin/curl
+指定请求方式
+-X POST
+5、*含义
+*/分 */时 */日 */月 */周
+5,10 * * * * 每个小时的5分钟，10分钟启动
+* 1/* * * *  每分钟请求
+0 1 * * *  每小时请求
