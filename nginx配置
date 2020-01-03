@@ -1,0 +1,7 @@
+1、重启
+ps -ef | grep nginx查看master主进程端口
+kill HUP 端口号  //平滑重启
+ systemctl restart nginx.service
+ service nginx restart
+ 
+ /usr/sbin/nginx -s reload
